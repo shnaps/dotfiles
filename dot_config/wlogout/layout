@@ -1,0 +1,30 @@
+{
+    "label" : "lock",
+    "action" : "swaylock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "Logout",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "loginctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "hibernate",
+    "action" : "sway exit",
+    "text" : "Exit Sway",
+    "keybind" : "q"
+}
+{
+    "label" : "reboot",
+    "action" : "loginctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}

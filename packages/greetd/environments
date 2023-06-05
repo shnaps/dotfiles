@@ -1,0 +1,3 @@
+dbus-run-session sway -d 2> /tmp/sway.log
+sway
+river

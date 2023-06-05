@@ -1,0 +1,74 @@
+@import "latte.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Mononoki Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @white;
+}
+
+tooltip {
+	background: #0f0f0f;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #262626;
+	}
+
+#workspaces button {
+    padding: 3px 0px;
+    color: #f0f0f0;
+}
+
+#workspaces button.focused {
+    color: #0f0f0f;
+    background-color: #c49ec4;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: #0f0f0f;
+    background-color: #9ec3c4;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+	background-color: #c49ec4;
+	color: #0f0f0f;
+	border-radius: 15px;
+}
+
+#language, #clock, #battery, #pulseaudio, #bluetooth, #network,
+ #workspaces, #backlight, #tray, #temperature, #cpu, #memory,
+  #custom-power,#custom-scratchpad-indicator, #custom-telegram, #mpd,
+  #scratchpad  {
+	background-color: #262626;
+	padding: 5px 10px;
+	margin: 5px 0px;
+    color: @white;
+}
+
+#workspaces {
+	background-color: #262626;
+	border-radius: 15px 0px 0px 15px;
+}
+
+#clock {
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 10px;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #c49ea0;
+    color: #0f0f0f;
+}
+
+#network {
+	border-radius: 0px 0px 0px 0px;
+}

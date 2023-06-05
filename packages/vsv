@@ -1,0 +1,27 @@
+
+   SERVICE              STATE   ENABLED   PID      COMMAND           TIME
+ ✔ agetty-tty1          run     true      1151     agetty            1 hour
+ ✔ agetty-tty2          run     true      1170     agetty            1 hour
+ ✔ agetty-tty3          run     true      1191     agetty            1 hour
+ ✔ agetty-tty4          run     true      1150     agetty            1 hour
+ ✔ agetty-tty5          run     true      1178     agetty            1 hour
+ ✔ agetty-tty6          run     true      1159     agetty            1 hour
+ ✔ alsa                 run     true      1169     alsa              1 hour
+ ✔ backlight            run     true      1176     backlight         1 hour
+ ✔ bluetoothd           run     true      1197     /usr/libexec/b... 1 hour
+ ✔ chronyd              run     true      1194     chronyd           1 hour
+ ✔ cronie               run     true      1161     cronie-crond      1 hour
+ ✔ cupsd                run     true      1175     cupsd             1 hour
+ ✔ dbus                 run     true      1164     dbus-daemon       1 hour
+ ✔ dhcpcd               run     true      1160     dhcpcd: [manag... 1 hour
+ ✔ greetd               run     true      1189     greetd            1 hour
+ ✔ i8kmon               run     true      1195     tclsh             1 hour
+ ✔ irqbalance           run     true      1155     irqbalance        1 hour
+ ✔ iwd                  run     true      1165     /usr/libexec/iwd  1 hour
+ ✔ nanoklogd            run     true      1167     nanoklogd         1 hour
+ ✔ popcorn              run     true      1172     snooze            1 hour
+ ✔ socklog-unix         run     true      1180     socklog           1 hour
+ ✔ sshd                 run     true      1184     sshd: /usr/bin... 1 hour
+ ✔ tlp                  run     true      1192     tlp               1 hour
+ ✔ udevd                run     true      1156     udevd             1 hour
+

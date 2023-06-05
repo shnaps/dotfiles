@@ -1,0 +1,17 @@
+window {
+   background-size: cover;
+   background-position: center;
+   background-color: #000000;
+   background-image: url("file:///etc/greetd/wallpaper.jpg");
+}
+
+box#body {
+   background-color: rgba(255, 255, 255, 0.0);
+   border-radius: 15px;
+   padding: 10px;
+   color : #ffffff;
+}
+
+label#clock {
+  color: #ffffff;
+}

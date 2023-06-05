@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=sway (with logs)
+Comment=An i3-compatible Wayland compositor
+Exec=dbus-run-session sway -d 2> /tmp/sway.log
+Type=Application

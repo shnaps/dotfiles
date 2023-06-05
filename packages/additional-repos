@@ -1,0 +1,14 @@
+total 48
+drwxr-xr-x 10 shnaps shnaps 4096 Jun  4 23:33 .
+drwx------ 32 shnaps shnaps 4096 Jun  4 23:19 ..
+drwxr-xr-x  8 shnaps shnaps 4096 Jun  4 22:09 ReGreet
+-rw-r--r--  1 shnaps shnaps    0 Jun  4 23:33 additional-repos
+-rw-r--r--  1 shnaps shnaps  250 Jun  4 23:33 changes
+drwxr-xr-x  3 shnaps shnaps 4096 Mar 24 00:53 dell-bios-fan-control
+drwxr-xr-x  2 shnaps shnaps 4096 Jun  4 23:30 greetd
+drwxr-xr-x  8 shnaps shnaps 4096 May 13 20:31 gtkgreet
+drwxr-xr-x 10 shnaps shnaps 4096 Mar 24 01:04 i8kutils
+drwxr-xr-x 17 shnaps shnaps 4096 Apr  7 21:41 runit-services
+-rw-r--r--  1 shnaps shnaps  146 Jun  4 23:31 sway-wayland.desktop
+drwxr-xr-x  7 shnaps shnaps 4096 Apr 14 18:06 swaylock-effects
+drwxr-xr-x  9 shnaps shnaps 4096 Jun  3 20:56 void-packages

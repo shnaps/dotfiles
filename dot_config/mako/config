@@ -1,0 +1,24 @@
+layer=top
+markup=1
+anchor=bottom-right
+background-color=#080808
+#text-color=#f0f0f06
+width=350
+height=200
+max-icon-size=96
+icon-location=right
+margin=0,30,30
+padding=10
+border-size=2
+border-color=#262626
+progress-color=over #262626ff
+border-radius=5
+default-timeout=4000
+group-by=summary
+format=<span font="DejaVuSansMono Nerd Font weight=325 Italic" size="12288">%s</span>\n<span font="DejaVuSansMono Nerd Font weight=325" size="12288">%b</span>
+
+[grouped]
+format=<span font="DejaVuSansMono Nerd Font weight=325 Italic" size="12288">%s</span>\n<span font="DejaVuSansMono Nerd Font weight=325" size="12288">%b</span>
+
+[mode=do-not-disturb]
+invisible=1
