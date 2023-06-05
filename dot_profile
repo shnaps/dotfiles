@@ -1,0 +1,15 @@
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland
+export ELM_DISPLAY=wl
+export SDL_VIDEODRIVER=wayland
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+export _JAVA_AWT_WM_NONREPARENTING=1
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export GTK_USE_PORTAL=0
+export TERMINAL=alacritty
+export INFOPATH=/opt/texlive/2023/texmf-dist/doc/info
