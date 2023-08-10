@@ -15,8 +15,9 @@ fi
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/texlive/2023/bin/x86_64-linux"
+
+eval "$(thefuck --alias)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-eval "$(thefuck --alias)"
