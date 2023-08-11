@@ -13,3 +13,4 @@ export XDG_STATE_HOME=$HOME/.local/state
 export GTK_USE_PORTAL=0
 export TERMINAL=alacritty
 export INFOPATH=/opt/texlive/2023/texmf-dist/doc/info
+export SDL_VIDEODRIVER=wayland
