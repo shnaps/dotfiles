@@ -3,7 +3,7 @@
     //"height": 30,
     //"width": 0, 
     "spacing": 0,
-    "modules-center": ["sway/workspaces","sway/language","sway/scratchpad","bluetooth", "network", "pulseaudio", "backlight", "battery", "tray", "custom/power", "clock" ],
+    "modules-center": ["sway/workspaces","sway/language","sway/scratchpad", "bluetooth", "network", "pulseaudio", "backlight", "battery", "tray", "custom/power", "clock" ],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -165,6 +165,34 @@
         "format": "",
         "format-connected-battery": " {device_alias} {device_battery_percentage}%",
         "on-click": "blueman-manager"
+    },
+    "custom/inhibitor": {
+		"format": "{icon}",
+		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+		"exec-if": "which sway-audio-idle-inhibit",
+		"return-type": "json",
+		"format-icons": {
+			"output": "",
+			"input": "",
+			"output-input": "  ",
+			"none": ""
+		}
+	},
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify 2> /dev/null",
+        "exec-if": "pgrep spotify",
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-click-right": "playerctl --player=spotify next",
+        "on-click-middle": "playerctl --player=spotify previous"
     }
+
 }
 
