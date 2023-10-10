@@ -12,3 +12,4 @@ layer=overlay
 insensitive=true
 prompt=
 term=alacritty
+key_expand=Tab
