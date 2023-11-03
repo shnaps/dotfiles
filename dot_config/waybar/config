@@ -93,14 +93,14 @@
     },
     "clock": {
         "format": "󰅐 {:%H:%M}",
-        "format-alt": " {:%A, %B %d, %Y (%R)}",
+        "format-alt": "󰃰 {:%A, %B %d, %Y (%R)}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
                 "calendar": {
                     "mode"          : "month",
                     "mode-mon-col"  : 3,
                     "weeks-pos"     : "right",
                     "on-scroll"     : 1,
-                    // "on-click-right": "mode",
+                    // "on-click-right": "alacritty --class 'calcurse'",
                     "format": {
                               "months":     "<span color='#ffead3'><b>{}</b></span>",
                               "days":       "<span color='#ecc6d9'><b>{}</b></span>",
@@ -128,7 +128,7 @@
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["󰉬", "", "󰉪"]
     },
     "backlight": {
         "format": "{percent}% {icon}",
@@ -140,31 +140,31 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰃨",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "format-wifi": "  {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
         "format-disconnected": "Disconnected ⚠",
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
-        "on-click": "iwgtk"
+        "on-click": "alacritty --class 'nmtui' -e nmtui"
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "󰅶 {icon} {format_source}",
+        "format-muted": "󰅶 {format_source}",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
             "phone": "",
             "portable": "",
             "car": "",
