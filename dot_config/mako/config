@@ -15,10 +15,10 @@ progress-color=over #262626ff
 border-radius=5
 default-timeout=4000
 group-by=summary
-format=<span font="DejaVuSansMono Nerd Font weight=325 Italic" size="12288">%s</span>\n<span font="DejaVuSansMono Nerd Font weight=325" size="12288">%b</span>
+format=<span font="DejaVuSansMNF" style="italic" size="14000">%s</span>\n<span font="DejaVuSansMNF" size="15000">%b</span>
 
 [grouped]
-format=<span font="DejaVuSansMono Nerd Font weight=325 Italic" size="12288">%s</span>\n<span font="DejaVuSansMono Nerd Font weight=325" size="12288">%b</span>
+format=<span font="DejaVuSansMNF" style="italic" size="14000">%s</span>\n<span font="DejaVuSansMNF" size="15000">%b</span>
 
 [mode=do-not-disturb]
 invisible=1
