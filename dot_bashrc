@@ -141,6 +141,8 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/texlive/2023/bin/x86_64-linux"
+export PATH="$PATH:/home/shnaps/.local/share/nvim/mason/bin"
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
