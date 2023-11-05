@@ -1,5 +1,5 @@
 local opt = vim.opt
-
+require 'custom.configs.autocommands'
 -- highlight current line
 opt.cursorline = true
 
