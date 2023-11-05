@@ -68,6 +68,7 @@ local plugins = {
   {
     "NvChad/nvcommunity",
     { import = "nvcommunity.editor.illuminate" },
+    { import = "nvcommunity.lsp.lspsaga" },
   },
 }
 

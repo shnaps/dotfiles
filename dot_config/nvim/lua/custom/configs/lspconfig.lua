@@ -9,8 +9,10 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  if lsp ~= "jdtls" then
+    lspconfig[lsp].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  end
 end

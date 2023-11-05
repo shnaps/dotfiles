@@ -1,14 +1,9 @@
--- ################
--- # Autocommands #
--- ################
-
 local autocmd = vim.api.nvim_create_autocmd
-print("Start autocmd")
+
 -- General Settings
 autocmd("FileType", {
   pattern = "java",
   callback = function()
-    print("Callback from java")
     local status_ok, jdtls = pcall(require, "jdtls")
     if not status_ok then
       return
@@ -81,8 +76,8 @@ autocmd("FileType", {
         "-data",
         workspace_dir,
       },
-      on_attach = require("plugins.configs.lspconfig").on_attach,
-      capabilities = require("plugins.configs.lspconfig").capabilities,
+      on_attach = require("custom.configs.overrides").on_attach,
+      capabilities = require("custom.configs.overrides").capabilities,
 
       -- 💀
       -- This is the default if not provided, you can remove it. Or adjust as needed.
@@ -144,8 +139,6 @@ autocmd("FileType", {
 
     -- This starts a new client & server,
     -- or attaches to an existing client & server depending on the `root_dir`.
-    require("jdtls").start_or_attach(config)
-
-    require("jdtls.setup").add_commands()
+    jdtls.start_or_attach(config)
   end,
 })
