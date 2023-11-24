@@ -82,6 +82,7 @@ local plugins = {
           dap.listeners.after.event_initialized["dapui_config"] = function()
             dapui.open()
           end
+          require "custom.configs.dap.settings.java-debug"
 
           -- dap.listeners.before.event_terminated["dapui_config"] = function()
           --   dapui.close()
@@ -92,7 +93,7 @@ local plugins = {
           -- end
 
           -- NOTE: Make sure to install the needed files/exectubles through mason
-          require "custom.configs.dap.settings.java-debug"
+          -- require "custom.configs.dap.settings.java-debug"
         end,
       },
     },
@@ -103,7 +104,6 @@ local plugins = {
   {
     "NvChad/nvcommunity",
     { import = "nvcommunity.editor.illuminate" },
-    { import = "nvcommunity.lsp.lspsaga" },
   },
 }
 
