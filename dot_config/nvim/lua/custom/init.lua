@@ -1,5 +1,8 @@
 local opt = vim.opt
+
+-- trigger for java 
 require 'custom.configs.autocommands'
+
 -- highlight current line
 opt.cursorline = true
 
@@ -21,11 +24,3 @@ opt.cmdwinheight = 6
 
 -- command line higher
 opt.cmdheight = 2
-
--- -- highlight yanked text for 200ms using the "Visual" highlight group
-vim.cmd[[
-    augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=201})
-    augroup END
-]]

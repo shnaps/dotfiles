@@ -1,5 +1,6 @@
 local M = {}
 M.lazy_nvim = require "custom.configs.lazy_nvim"
+M.mappings = require "custom.mappings"
 
 M.ui = {
   ------------------------------- base46 -------------------------------------
@@ -13,7 +14,6 @@ M.ui = {
   lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
   -- https://github.com/NvChad/base46/tree/v2.0/lua/base46/extended_integrations
-  extended_integrations = { "notify" }, -- these aren't compiled by default, ex: "alpha", "notify"
 
   -- cmp themeing
   cmp = {
@@ -81,7 +81,5 @@ M.ui = {
 }
 
 M.plugins = "custom.plugins"
-M.mappings = require "custom.mappings"
-
 
 return M

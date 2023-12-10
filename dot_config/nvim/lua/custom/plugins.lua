@@ -1,9 +1,11 @@
-local overrides = require "custom.configs.overrides"
-
 local plugins = {
   {
+    "ThePrimeagen/vim-be-good",
+    lazy = false,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
+    opts = require "custom.configs.treesitter",
   },
   {
     "jiaoshijie/undotree",
@@ -34,12 +36,10 @@ local plugins = {
     end,
   },
   {
-    "ThePrimeagen/vim-be-good",
-    lazy = false,
-  },
-  {
     "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
+    opts = function()
+      return require "custom.configs.nvimtree"
+    end,
   },
   -- In order to modify the `lspconfig` configuration:
   {
@@ -58,9 +58,23 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason,
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "prettier",
+        "stylua",
+        "shellcheck",
+        -- "checkstyle",
+        "google-java-format",
+        "sonarlint-language-server",
+        "java-debug-adapter",
+        "clang-format",
+      },
+    },
   },
   { "williamboman/mason-lspconfig.nvim" },
+  { "jay-babu/mason-nvim-dap.nvim" },
+  { "mfussenegger/nvim-jdtls" },
   {
     "rcarriga/nvim-dap-ui",
     init = function()
@@ -99,8 +113,6 @@ local plugins = {
     },
     opts = require "custom.configs.dap.ui",
   },
-  { "jay-babu/mason-nvim-dap.nvim" },
-  { "mfussenegger/nvim-jdtls" },
   {
     "NvChad/nvcommunity",
     { import = "nvcommunity.editor.illuminate" },
