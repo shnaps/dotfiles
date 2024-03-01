@@ -12,3 +12,10 @@ export XDG_STATE_HOME=$HOME/.local/state
 export GTK_USE_PORTAL=0
 export TERMINAL=alacritty
 export INFOPATH=/opt/texlive/2023/texmf-dist/doc/info
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/shnaps/.local/share/JetBrains/Toolbox/scripts"
+
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi

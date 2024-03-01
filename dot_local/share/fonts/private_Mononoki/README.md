@@ -1,3 +1,11 @@
+# Nerd Fonts
+
+This is an archived font from the Nerd Fonts release v3.1.0.
+
+For more information see:
+* https://github.com/ryanoasis/nerd-fonts/
+* https://github.com/ryanoasis/nerd-fonts/releases/latest/
+
 # mononoki
 
 **mononoki** is a font for programming and code review

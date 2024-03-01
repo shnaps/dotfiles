@@ -18,3 +18,4 @@ alias vsv='sudo vsv'
 alias ls='ls --color=auto'
 alias ce='chezmoi edit'
 alias tzupdate='sudo tzupdate'
+alias ssh="TERM=xterm-256color $(which ssh)"

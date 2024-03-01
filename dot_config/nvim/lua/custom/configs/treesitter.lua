@@ -4,8 +4,8 @@ local options = {
     "lua",
     "html",
     "css",
-    "bash",
     "java",
+    "python"
   },
 
 

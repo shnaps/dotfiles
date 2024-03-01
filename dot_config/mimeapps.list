@@ -16,6 +16,10 @@ image/jpeg=imv.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/epub=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-6EOSI2.desktop
+message/rfc822=userapp-Thunderbird-6EOSI2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-6EOSI2.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-DEKA21.desktop;
@@ -28,12 +32,14 @@ application/x-extension-shtml=userapp-Firefox-DEKA21.desktop;
 application/xhtml+xml=userapp-Firefox-DEKA21.desktop;
 application/x-extension-xhtml=userapp-Firefox-DEKA21.desktop;
 application/x-extension-xht=userapp-Firefox-DEKA21.desktop;
-application/pdf=mupdf.desktop;
+application/pdf=mupdf.desktop;masterpdfeditor5.desktop;
 application/x-shellscript=code-oss.desktop;featherpad.desktop;
-application/zip=SweetHome3D.desktop;xarchiver.desktop;thunar.desktop;
+application/zip=SweetHome3D.desktop;thunar.desktop;xarchiver.desktop;
 application/x-xz-compressed-tar=xarchiver.desktop;
 image/png=swappy.desktop;mupdf.desktop;imv-dir.desktop;imv.desktop;
 image/jpeg=imv-dir.desktop;imv.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 text/x-tex=texmaker.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-6EOSI2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-6EOSI2.desktop;

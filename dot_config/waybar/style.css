@@ -47,7 +47,7 @@ tooltip {
 #language, #clock, #battery, #pulseaudio, #bluetooth, #network,
  #workspaces, #backlight, #tray, #temperature, #cpu, #memory,
   #custom-power,#custom-scratchpad-indicator, #custom-telegram, #mpd,
-  #scratchpad, #custom-inhibitor, #custom-media  {
+  #scratchpad, #custom-inhibitor, #custom-media, #idle_inhibitor  {
 	background-color: #262626;
 	padding: 5px 10px;
 	margin: 5px 0px;

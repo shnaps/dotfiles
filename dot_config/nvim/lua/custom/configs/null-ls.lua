@@ -11,8 +11,7 @@ local sources = {
   formatting.stylua,
   formatting.clang_format,
   formatting.google_java_format,
-  lint.shellcheck,
-  -- lint.checkstyle,
+  lint.checkstyle,
 }
 
 null_ls.setup {

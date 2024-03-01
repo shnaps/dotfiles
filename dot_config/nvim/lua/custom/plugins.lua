@@ -40,6 +40,9 @@ local plugins = {
     opts = function()
       return require "custom.configs.nvimtree"
     end,
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
   },
   -- In order to modify the `lspconfig` configuration:
   {
@@ -63,12 +66,15 @@ local plugins = {
         "lua-language-server",
         "prettier",
         "stylua",
-        "shellcheck",
         -- "checkstyle",
         "google-java-format",
         "sonarlint-language-server",
         "java-debug-adapter",
         "clang-format",
+      },
+      registries = {
+        "github:nvim-java/mason-registry",
+        "github:mason-org/mason-registry",
       },
     },
   },
@@ -117,6 +123,10 @@ local plugins = {
     "NvChad/nvcommunity",
     { import = "nvcommunity.editor.illuminate" },
   },
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  }
 }
 
 return plugins
