@@ -65,15 +65,10 @@ local plugins = {
         "java-debug-adapter",
         "clang-format",
       },
-      registries = {
-        "github:nvim-java/mason-registry",
-        "github:mason-org/mason-registry",
-      },
     },
   },
   { "williamboman/mason-lspconfig.nvim" },
   { "jay-babu/mason-nvim-dap.nvim" },
-  { "mfussenegger/nvim-jdtls" },
   {
     "rcarriga/nvim-dap-ui",
     init = function()
@@ -82,35 +77,11 @@ local plugins = {
     dependencies = {
       {
         "mfussenegger/nvim-dap",
-        config = function()
-          -- NOTE: Check out this for guide
-          -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
-          local dap = require "dap"
-          vim.fn.sign_define(
-            "DapBreakpoint",
-            { text = "🛑", texthl = "DiagnosticSignError", linehl = "", numhl = "" }
-          )
-
-          local dapui = require "dapui"
-          dap.listeners.after.event_initialized["dapui_config"] = function()
-            dapui.open()
-          end
-          --require "custom.configs.dap.settings.java-debug"
-
-          -- dap.listeners.before.event_terminated["dapui_config"] = function()
-          --   dapui.close()
-          -- end
-
-          -- dap.listeners.before.event_exited["dapui_config"] = function()
-          --   dapui.close()
-          -- end
-
-          -- NOTE: Make sure to install the needed files/exectubles through mason
-          -- require "custom.configs.dap.settings.java-debug"
-        end,
       },
     },
-    opts = require "custom.configs.dap.ui",
+    config = function()
+      require("dapui").setup()
+    end,
   },
   {
     "NvChad/nvcommunity",
@@ -120,6 +91,72 @@ local plugins = {
     "stevearc/conform.nvim",
     config = function()
       require "custom.configs.conform"
+    end,
+  },
+  {
+    "nvim-java/nvim-java",
+    dependencies = {
+      "nvim-java/lua-async-await",
+      "nvim-java/nvim-java-core",
+      "nvim-java/nvim-java-test",
+      "nvim-java/nvim-java-dap",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          registries = {
+            "github:nvim-java/mason-registry",
+            "github:mason-org/mason-registry",
+          },
+        },
+      },
+      {
+        "williamboman/mason-lspconfig.nvim",
+        opts = {
+          handlers = {
+            ["jdtls"] = function()
+              require("java").setup()
+            end,
+          },
+        },
+      },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    lazy = false,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require("noice").setup {
+        lsp = {
+          hover = {
+            enabled = false,
+          },
+          override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+            ["cmp.entry.get_documentation"] = true,
+          },
+          signature = {
+            enabled = false,
+          },
+        },
+        hover = {
+          enabled = false,
+        },
+        presets = {
+          bottom_search = true, -- use a classic bottom cmdline for search
+          command_palette = true, -- position the cmdline and popupmenu together
+          long_message_to_split = true, -- long messages will be sent to a split
+          -- inc_rename = false,           -- enables an input dialog for inc-rename.nvim
+          -- lsp_doc_border = false,       -- add a border to hover docs and signature help
+        },
+      }
     end,
   },
 }

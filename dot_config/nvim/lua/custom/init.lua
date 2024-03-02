@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- trigger for java
-require "custom.configs.jdtls"
+-- require "custom.configs.jdtls"
 
 -- highlight current line
 opt.cursorline = true

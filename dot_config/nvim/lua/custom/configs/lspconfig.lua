@@ -17,3 +17,4 @@ for _, lsp in ipairs(servers) do
     }
   end
 end
+lspconfig.jdtls.setup {}
