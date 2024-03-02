@@ -8,31 +8,35 @@ local plugins = {
     opts = require "custom.configs.treesitter",
   },
   {
-    "jiaoshijie/undotree",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
+    "debugloop/telescope-undo.nvim",
+    dependencies = { -- note how they're inverted to above example
+      {
+        "nvim-telescope/telescope.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+      },
     },
-    keys = { -- load the plugin only when using it's keybinding:
-      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+    keys = {
+      { -- lazy style key map
+        "<leader>u",
+        "<cmd>Telescope undo<cr>",
+        desc = "undo history",
+      },
     },
-    config = function()
-      require("undotree").setup {
-        float_diff = true,
-        layout = "left_bottom",
-        ignore_filetype = { "undotree", "undotreeDiff", "qf", "TelescopePrompt", "spectre_panel", "tsplayground" },
-        window = {
-          winblend = 30,
+    opts = {
+      -- don't use `defaults = { }` here, do this in the main telescope spec
+      extensions = {
+        undo = {
+          -- telescope-undo.nvim config, see below
         },
-        keymaps = {
-          ["j"] = "move_next",
-          ["k"] = "move_prev",
-          ["J"] = "move_change_next",
-          ["K"] = "move_change_prev",
-          ["<cr>"] = "action_enter",
-          ["p"] = "enter_diffbuf",
-          ["q"] = "quit",
-        },
-      }
+        -- no other extensions here, they can have their own spec too
+      },
+    },
+    config = function(_, opts)
+      -- Calling telescope's setup from multiple specs does not hurt, it will happily merge the
+      -- configs for us. We won't use data, as everything is in it's own namespace (telescope
+      -- defaults, as well as each extension).
+      require("telescope").setup(opts)
+      require("telescope").load_extension "undo"
     end,
   },
   {
@@ -40,24 +44,13 @@ local plugins = {
     opts = function()
       return require "custom.configs.nvimtree"
     end,
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
-    },
   },
-  -- In order to modify the `lspconfig` configuration:
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "nvimtools/none-ls.nvim",
-      config = function()
-        require "custom.configs.null-ls"
-      end,
-    },
-
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end,
+    end, -- Override to setup mason-lspconfig
   },
   {
     "williamboman/mason.nvim",
@@ -102,7 +95,7 @@ local plugins = {
           dap.listeners.after.event_initialized["dapui_config"] = function()
             dapui.open()
           end
-          require "custom.configs.dap.settings.java-debug"
+          --require "custom.configs.dap.settings.java-debug"
 
           -- dap.listeners.before.event_terminated["dapui_config"] = function()
           --   dapui.close()
@@ -124,9 +117,11 @@ local plugins = {
     { import = "nvcommunity.editor.illuminate" },
   },
   {
-    'stevearc/conform.nvim',
-    opts = {},
-  }
+    "stevearc/conform.nvim",
+    config = function()
+      require "custom.configs.conform"
+    end,
+  },
 }
 
 return plugins

@@ -1,13 +1,12 @@
 local options = {
-   ensure_installed = {
+  ensure_installed = {
     "vim",
     "lua",
     "html",
     "css",
     "java",
-    "python"
+    "python",
   },
-
 
   highlight = {
     enable = true,

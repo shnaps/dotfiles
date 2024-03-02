@@ -1,4 +1,3 @@
-
 local options = {
   filters = {
     dotfiles = false,

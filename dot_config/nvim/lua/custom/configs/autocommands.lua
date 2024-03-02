@@ -17,7 +17,7 @@ autocmd("FileType", {
 
     local bundles = {
       vim.fn.glob(java_debug_path .. "extension/server/com.microsoft.java.debug.plugin-*.jar", 1),
-    };
+    }
     vim.list_extend(bundles, vim.split(vim.fn.glob(java_test_path .. "extension/server/*.jar", 1), "\n"))
 
     -- NOTE: Decrease the amount of files to improve speed(Experimental).
@@ -83,15 +83,15 @@ autocmd("FileType", {
         "-data",
         workspace_dir,
       },
-      on_attach = require("custom.configs.overrides").on_attach,
-      capabilities = require("custom.configs.overrides").capabilities,
+      --on_attach = require("custom.configs.overrides").on_attach,
+      --capabilities = require("custom.configs.overrides").capabilities,
 
       -- 💀
       -- This is the default if not provided, you can remove it. Or adjust as needed.
       -- One dedicated LSP server & client will be started per unique root_dir
       root_dir = require("jdtls.setup").find_root(root_markers),
       init_options = {
-        bundles = bundles
+        bundles = bundles,
       },
       settings = {
         eclipse = {
