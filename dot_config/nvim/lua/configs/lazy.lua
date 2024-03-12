@@ -1,12 +1,16 @@
 return {
-  checker = {
-    -- automatically check for plugin updates
-    enabled = true,
-    concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-    notify = true,        -- get a notification when new updates are found
-    frequency = 43200,    -- check for updates every hour
-    check_pinned = false, -- check for pinned packages that can't be updated
+  defaults = { lazy = true },
+  install = { colorscheme = { "nvchad" } },
+
+  ui = {
+    icons = {
+      ft = "",
+      lazy = "󰂠 ",
+      loaded = "",
+      not_loaded = "",
+    },
   },
+
   performance = {
     rtp = {
       disabled_plugins = {
