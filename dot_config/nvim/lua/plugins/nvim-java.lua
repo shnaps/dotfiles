@@ -22,15 +22,5 @@ return {
 				},
 			},
 		},
-		{
-			"williamboman/mason-lspconfig.nvim",
-			opts = {
-				handlers = {
-					["jdtls"] = function()
-						require("java").setup()
-					end,
-				},
-			},
-		},
 	},
 }

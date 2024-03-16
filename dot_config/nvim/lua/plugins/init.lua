@@ -5,7 +5,6 @@ return {
 			require("configs.conform")
 		end,
 	},
-
 	{
 		"nvim-tree/nvim-tree.lua",
 		opts = {
