@@ -1,10 +1,5 @@
 return {
 	"nvim-java/nvim-java",
-	opts = {
-		jdk = {
-			auto_install = false,
-		},
-	},
 	dependencies = {
 		"nvim-java/lua-async-await",
 		"nvim-java/nvim-java-core",
