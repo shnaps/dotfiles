@@ -12,18 +12,15 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 		dapui.setup(opts)
-		-- dap.listeners.after.event_initialized["dapui_config"] = function()
-			-- dapui.open({})
-		-- end
-		-- dap.listeners.before.event_terminated["dapui_config"] = function()
-			-- dapui.close({})
-		-- end
-		-- dap.listeners.before.event_exited["dapui_config"] = function()
-			-- dapui.close({})
-		-- end
+		dap.listeners.after.event_initialized["dapui_config"] = function()
+			dapui.open({})
+		end
+		dap.listeners.before.event_terminated["dapui_config"] = function()
+			dapui.close({})
+		end
+		dap.listeners.before.event_exited["dapui_config"] = function()
+			dapui.close({})
+		end
 
-		-- Note: Added this <leader>dd duplicate of <F5> because somehow the <F5>
-		-- mapping keeps getting reset each time I restart nvim-dap. Annoying but whatever.
-		--
 	end,
 }
