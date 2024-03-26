@@ -6,7 +6,6 @@ return {
 			"prettier",
 			"stylua",
 			"google-java-format",
-			"sonarlint-language-server",
 			"java-debug-adapter",
 			"clang-format",
 		},

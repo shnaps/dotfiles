@@ -18,7 +18,7 @@
 }
 {
     "label" : "hibernate",
-    "action" : "sway exit",
+    "action" : "loginctl hibernate",
     "text" : "Exit Sway",
     "keybind" : "q"
 }
