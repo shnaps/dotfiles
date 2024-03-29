@@ -14,7 +14,8 @@ return {
 			"markdown_inline",
 			"bash",
 			"regex",
-      "python",
+			"python",
+			"typst",
 		},
 
 		highlight = {

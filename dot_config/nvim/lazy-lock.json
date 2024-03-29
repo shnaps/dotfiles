@@ -43,6 +43,8 @@
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "telescope-undo.nvim": { "branch": "main", "commit": "d19e2edc8b18d03283bd91f67310ac300ad003ce" },
   "telescope.nvim": { "branch": "master", "commit": "b22e6f6896cd64b109bd0807a24098d225d5fb49" },
+  "typst-preview.nvim": { "branch": "master", "commit": "36a82aaff8931f96015ee7365afe2e253ab3b1ea" },
+  "typst.vim": { "branch": "main", "commit": "86e4fa8dcddd032f9fdbf04602417a8baac8fed3" },
   "ui": { "branch": "v2.5", "commit": "41885870b11124e5e1dc1f854c34b67dcfc0642e" },
   "vim-be-good": { "branch": "master", "commit": "4fa57b7957715c91326fcead58c1fa898b9b3625" },
   "vim-illuminate": { "branch": "master", "commit": "305bf07b919ac526deb5193280379e2f8b599926" },
