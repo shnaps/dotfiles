@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-	theme = "tokyonight",
+	theme = "flexoki-light",
 	nvdash = {
 		load_on_startup = true,
 

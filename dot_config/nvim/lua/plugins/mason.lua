@@ -8,8 +8,9 @@ return {
 			"google-java-format",
 			"java-debug-adapter",
 			"clang-format",
-      "typst-lsp",
-      "typstfmt"
+			"typst-lsp",
+			"typstfmt",
+			"bibtex-tidy",
 		},
 	},
 }

@@ -9,7 +9,8 @@ local options = {
 		java = { "google-java-format" },
 		python = { "ruff_format" },
 		sh = { "shfmt" },
-    typst = { "typstfmt"}
+    typst = { "typstfmt"},
+    tex = { "bibtex-tidy"},
 	},
    format_on_save = {
 	--   -- These options will be passed to conform.format()

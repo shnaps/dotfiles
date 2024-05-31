@@ -12,3 +12,8 @@ end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map("v", ">", ">gv", { desc = "Indent line" })
+
+map("n", "<Up>", "<Nop>", { desc = "Disable Up arrow" })
+map("n", "<Down>", "<Nop>", { desc = "Disable Down arrow" })
+map("n", "<Left>", "<Nop>", { desc = "Disable Left arrow" })
+map("n", "<Right>", "<Nop>", { desc = "Disable Right arrow" })
