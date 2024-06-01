@@ -1,7 +1,9 @@
 local M = {}
 
 M.ui = {
-	theme = "flexoki-light",
+  theme_toggle = { "bearded-arc", "one_light" },
+	theme = "bearded-arc",
+  transparency = false,
 	nvdash = {
 		load_on_startup = true,
 
@@ -26,6 +28,10 @@ M.ui = {
 			{ "  Mappings", "Spc c h", "NvCheatsheet" },
 		},
 	},
+}
+
+M.base46 = {
+  integrations = {},
 }
 
 return M
