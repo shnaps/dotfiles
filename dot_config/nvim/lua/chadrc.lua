@@ -1,9 +1,9 @@
 local M = {}
 
 M.ui = {
-  theme_toggle = { "bearded-arc", "one_light" },
+	theme_toggle = { "bearded-arc", "one_light" },
 	theme = "bearded-arc",
-  transparency = false,
+	transparency = false,
 	nvdash = {
 		load_on_startup = true,
 
@@ -31,7 +31,7 @@ M.ui = {
 }
 
 M.base46 = {
-  integrations = {},
+	integrations = { "neogit" },
 }
 
 return M

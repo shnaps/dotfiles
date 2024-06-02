@@ -14,4 +14,3 @@ api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
--- vim.opt.guicursor = "n-v-i-c:block-Cursor"

@@ -101,7 +101,7 @@ return {
 			desc = "Toggle REPL",
 		},
 		{
-			"<leader>ds",
+			"<leader>dS",
 			function()
 				require("dap").session()
 			end,
@@ -120,6 +120,27 @@ return {
 				require("dap.ui.widgets").hover()
 			end,
 			desc = "Widgets",
+		},
+		{
+			"<leader>dz",
+			function()
+				require("dap").eval()
+			end,
+			desc = "Eval",
+		},
+		{
+			"<leader>dZ",
+			function()
+				require("dap").eval(vim.fn.input("expression: "))
+			end,
+			desc = "Eval expression",
+		},
+		{
+			"<leader>df",
+			function()
+				require("telescope").extensions.dap.list_breakpoints()
+			end,
+			desc = "List of breakpoints",
 		},
 	},
 }
