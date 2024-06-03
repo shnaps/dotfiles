@@ -3,7 +3,9 @@ return {
 	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	cmd = "Telescope",
 	opts = function()
-		return require("configs.telescope")
+		local conf = require("nvchad.configs.telescope")
+		conf.extensions_list = { "themes", "terms", "dap" }
+		return conf
 	end,
 	config = function(_, opts)
 		dofile(vim.g.base46_cache .. "telescope")
