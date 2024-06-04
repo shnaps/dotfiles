@@ -3,10 +3,10 @@ return {
 	opts = {
 		ensure_installed = {
 			"vim",
-      "vimdoc",
+			"vimdoc",
 			"lua",
-      "luadoc",
-      "printf",
+			"luadoc",
+			"printf",
 			"html",
 			"css",
 			"javascript",
@@ -19,6 +19,7 @@ return {
 			"regex",
 			"python",
 			"typst",
+			"rust",
 		},
 
 		highlight = {
