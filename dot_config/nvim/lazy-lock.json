@@ -20,17 +20,17 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "a4caa0d083aab56f6cd5acf2d42331b74614a585" },
   "mason-nvim-dap.nvim": { "branch": "main", "commit": "67210c0e775adec55de9826b038e8b62de554afc" },
   "mason.nvim": { "branch": "main", "commit": "0950b15060067f752fde13a779a994f59516ce3d" },
-  "neoconf.nvim": { "branch": "main", "commit": "a432a7802b60d52caebd484348266b64bdd1fb21" },
+  "neoconf.nvim": { "branch": "main", "commit": "7d0931532c66e7ffac93f68bd3adb4ca3f59d843" },
   "neogit": { "branch": "master", "commit": "3d58bf1d548f6fafdaab8ce4d75e25c438aee92c" },
   "noice.nvim": { "branch": "main", "commit": "29c7f030b0920e2f17263a9ab8742cde144b9140" },
-  "nui.nvim": { "branch": "main", "commit": "b1b3dcd6ed8f355c78bad3d395ff645be5f8b6ae" },
+  "nui.nvim": { "branch": "main", "commit": "322978c734866996274467de084a95e4f9b5e0b1" },
   "nvim-autopairs": { "branch": "master", "commit": "c15de7e7981f1111642e7e53799e1211d4606cb9" },
   "nvim-cmp": { "branch": "main", "commit": "5260e5e8ecadaf13e6b82cf867a909f54e15fd07" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "85855b38011114929f4058efc97af1059ab3e41d" },
   "nvim-dap": { "branch": "master", "commit": "6f79b822997f2e8a789c6034e147d42bc6706770" },
   "nvim-dap-ui": { "branch": "master", "commit": "b7267003ba4dd860350be86f75b9d9ea287cedca" },
   "nvim-dap-virtual-text": { "branch": "master", "commit": "d7c695ea39542f6da94ee4d66176f5d660ab0a77" },
-  "nvim-java": { "branch": "main", "commit": "30a1d3648f4b527f7d26ed36f1042cf28c566e0d" },
+  "nvim-java": { "branch": "main", "commit": "9e19b5ed056062d59fa18d1722c901c3dec44347" },
   "nvim-java-core": { "branch": "main", "commit": "469aabd3e88cfa3a4d131f81de8b8caed14cb585" },
   "nvim-java-dap": { "branch": "main", "commit": "55c90c5d2414f6e66f843f38e111bee284d71e61" },
   "nvim-java-refactor": { "branch": "main", "commit": "7b841d53ed0ba55857debd0e32ce069b2c17e745" },
@@ -52,5 +52,6 @@
   "ui": { "branch": "v2.5", "commit": "0c283b6aed4eed585a497c9031b18b5009bfe4dd" },
   "vim-be-good": { "branch": "master", "commit": "4fa57b7957715c91326fcead58c1fa898b9b3625" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
-  "which-key.nvim": { "branch": "main", "commit": "4b7167f8fb2dba3d01980735e3509e172c024c29" }
+  "which-key.nvim": { "branch": "main", "commit": "4b7167f8fb2dba3d01980735e3509e172c024c29" },
+  "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }
