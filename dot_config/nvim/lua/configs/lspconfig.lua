@@ -13,7 +13,6 @@ configs.defaults()
 
 local custom_on_attach = function(client, bufnr)
 	on_attach(client, bufnr)
-
 	if client.server_capabilities.inlayHintProvider then
 		require("inlay-hints").on_attach(client, bufnr)
 	end

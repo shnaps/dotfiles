@@ -11,7 +11,6 @@ return {
 			"typst-lsp",
 			"typstfmt",
 			"bibtex-tidy",
-			"rust-analyzer",
 			"ast-grep",
 		},
 	},
