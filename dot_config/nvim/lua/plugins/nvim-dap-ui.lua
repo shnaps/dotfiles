@@ -10,6 +10,10 @@ return {
 		-- setup dap config by VsCode launch.json file
 		-- require("dap.ext.vscode").load_launchjs()
 		local dap, dapui = require("dap"), require("dapui")
+		dapui.setup(opts)
+		dap.listeners.after.event_initialized["dapui_config"] = function()
+			dapui.open({})
+		end
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
