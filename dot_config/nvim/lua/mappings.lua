@@ -1,4 +1,5 @@
 require("nvchad.mappings")
+local utils = require("configs.utils")
 
 -- add yours here
 
@@ -52,3 +53,7 @@ map("n", "<leader>gd", function()
 end, { desc = "Noice Dismiss all" })
 
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
+
+map("n", "<leader>gg", function()
+	utils.go_to_github_link()
+end, { desc = "Go to GitHub link generated from string" })

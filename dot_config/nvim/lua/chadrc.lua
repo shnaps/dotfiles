@@ -33,5 +33,4 @@ M.ui = {
 M.base46 = {
 	integrations = { "neogit" },
 }
-
 return M
