@@ -28,6 +28,10 @@ M.ui = {
 			{ "  Mappings", "Spc c h", "NvCheatsheet" },
 		},
 	},
+	cheatsheet = {
+		theme = "grid", -- simple/grid
+		excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
+	},
 }
 
 M.base46 = {

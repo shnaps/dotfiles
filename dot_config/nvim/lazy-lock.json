@@ -14,6 +14,7 @@
   "friendly-snippets": { "branch": "main", "commit": "e11b09bf10706bb74e16e4c3d11b2274d62e687f" },
   "gitsigns.nvim": { "branch": "main", "commit": "379a5a915aea3e9ba0d4a778e8478584ac0f9011" },
   "indent-blankline.nvim": { "branch": "master", "commit": "d98f537c3492e87b6dc6c2e3f66ac517528f406f" },
+  "inlay-hints.nvim": { "branch": "master", "commit": "5526103e4b80c66234e60c8d92dad967d0e1bcd7" },
   "lazy.nvim": { "branch": "main", "commit": "0fc34a0cf5f5f6f998a0897119a7d846b47eaa9d" },
   "leetcode.nvim": { "branch": "master", "commit": "458da8ea7e73e8ed221165aa56a595e33c4ec644" },
   "lua-async-await": { "branch": "main", "commit": "652d94df34e97abe2d4a689edbc4270e7ead1a98" },
