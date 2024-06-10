@@ -147,7 +147,7 @@ source "$OSH"/oh-my-bash.sh
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/texlive/2024/bin/x86_64-linux"
 export PATH="$PATH:/home/shnaps/.local/share/nvim/mason/bin"
-
+export PATH="$PATH:/home/.cargo/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

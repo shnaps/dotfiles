@@ -25,7 +25,7 @@ map("n", "<leader>i", function()
 		return
 	end
 
-	vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+	vim.diagnostic.open_float(nil, { focus = false, scope = "cursor", border = "rounded" })
 end, { desc = "General Toggle floating diagnostics" })
 
 map("i", "jk", "<ESC>", { desc = "General Escape insert mode" })
