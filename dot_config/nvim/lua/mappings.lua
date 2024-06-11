@@ -57,3 +57,7 @@ map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic locli
 map("n", "<leader>gg", function()
 	utils.go_to_github_link()
 end, { desc = "Go to GitHub link generated from string" })
+
+map("n", "leader>gn", function()
+	require("neogit").cmd("open")
+end, { desc = "General Open neogit" })
