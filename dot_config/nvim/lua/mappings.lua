@@ -1,6 +1,6 @@
 require("nvchad.mappings")
 local utils = require("configs.utils")
-
+local neogit = require("neogit")
 -- add yours here
 
 local map = vim.keymap.set
@@ -58,6 +58,4 @@ map("n", "<leader>gg", function()
 	utils.go_to_github_link()
 end, { desc = "Go to GitHub link generated from string" })
 
-map("n", "leader>gn", function()
-	require("neogit").cmd("open")
-end, { desc = "General Open neogit" })
+map("n", "<leader>gn", neogit.open, { desc = "General Open neogit" })
