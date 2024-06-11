@@ -31,11 +31,6 @@ end, { desc = "General Toggle floating diagnostics" })
 map("i", "jk", "<ESC>", { desc = "General Escape insert mode" })
 map("v", ">", ">gv", { desc = "General Indent line" })
 
-map("n", "<Up>", "<Nop>", { desc = "General Disable Up arrow" })
-map("n", "<Down>", "<Nop>", { desc = "General Disable Down arrow" })
-map("n", "<Left>", "<Nop>", { desc = "General Disable Left arrow" })
-map("n", "<Right>", "<Nop>", { desc = "General Disable Right arrow" })
-
 map("c", "<S-Enter>", function()
 	require("noice").redirect(vim.fn.getcmdline())
 end, { desc = "Noice Redirect cmdline" })
