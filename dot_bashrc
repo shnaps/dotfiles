@@ -104,7 +104,6 @@ aliases=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bashmarks
   progress
 )
 
@@ -147,9 +146,8 @@ source "$OSH"/oh-my-bash.sh
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/texlive/2024/bin/x86_64-linux"
 export PATH="$PATH:/home/shnaps/.local/share/nvim/mason/bin"
-export PATH="$PATH:/home/.cargo/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+. "$HOME/.cargo/env"

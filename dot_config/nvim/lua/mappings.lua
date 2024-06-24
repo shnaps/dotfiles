@@ -1,6 +1,7 @@
 require("nvchad.mappings")
 local utils = require("configs.utils")
 local neogit = require("neogit")
+local hardtime = require("hardtime")
 -- add yours here
 
 local map = vim.keymap.set
@@ -54,3 +55,4 @@ map("n", "<leader>gg", function()
 end, { desc = "Go to GitHub link generated from string" })
 
 map("n", "<leader>gn", neogit.open, { desc = "General Open neogit" })
+map("n", "<leader>tv", hardtime.toggle, { desc = "General toggle hardtime" })

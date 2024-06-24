@@ -12,6 +12,7 @@ return {
 			"typstfmt",
 			"bibtex-tidy",
 			"ast-grep",
+			"typescript-language-server",
 		},
 	},
 }

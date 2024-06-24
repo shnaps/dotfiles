@@ -1,29 +1,14 @@
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
-autocmd("BufLeave", {
-	desc = "Hide tabufline if only one buffer and one tab are open",
-	pattern = "*",
-	group = vim.api.nvim_create_augroup("TabuflineHide", { clear = true }),
-	callback = function()
-		vim.schedule(function()
-			if #vim.t.bufs <= 1 and #vim.api.nvim_list_tabpages() <= 1 then
-				vim.o.showtabline = 0
-			else
-				vim.o.showtabline = 2
-			end
-		end)
-	end,
-})
-
-autocmd("FileType", {
-	desc = "Workaround for NvCheatsheet's zindex being higher than Mason's.",
-	pattern = "nvcheatsheet",
-	group = augroup("FixCheatsheetZindex", { clear = true }),
-	callback = function()
-		vim.api.nvim_win_set_config(0, { zindex = 44 })
-	end,
-})
+-- autocmd("FileType", {
+-- 	desc = "Workaround for NvCheatsheet's zindex being higher than Mason's.",
+-- 	pattern = "nvcheatsheet",
+-- 	group = augroup("FixCheatsheetZindex", { clear = true }),
+-- 	callback = function()
+-- 		vim.api.nvim_win_set_config(0, { zindex = 44 })
+-- 	end,
+-- })
 
 autocmd("VimResized", {
 	desc = "Auto resize panes when resizing nvim window.",
