@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 ### Variables
 #
-exec dbus-update-activation-environment DBUS_SESSION_BUS_ADDRESS DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --all DBUS_SESSION_BUS_ADDRESS DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $noti makoctl

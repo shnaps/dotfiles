@@ -20,6 +20,7 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-6EOSI2.desktop
 message/rfc822=userapp-Thunderbird-6EOSI2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6EOSI2.desktop
+x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-DEKA21.desktop;
