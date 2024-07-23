@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 ### Variables
 #
-exec dbus-update-activation-environment --all DBUS_SESSION_BUS_ADDRESS DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment DBUS_SESSION_BUS_ADDRESS DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $noti makoctl
@@ -20,7 +20,6 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # Launch via Sway
-# set $menu wofi --hide-scroll  | xargs swaymsg exec --
 set $menu fuzzel | xargs swaymsg exec --
 
 include $HOME/.config/sway/config.d/*
