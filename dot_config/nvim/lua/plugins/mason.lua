@@ -8,7 +8,7 @@ return {
 			"google-java-format",
 			"java-debug-adapter",
 			"clang-format",
-			"typst-lsp",
+			"tinymist",
 			"typstfmt",
 			"bibtex-tidy",
 			"ast-grep",
