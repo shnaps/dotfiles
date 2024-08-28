@@ -18,3 +18,16 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+lspconfig.tinymist.setup({
+	filetypes = {
+		"typst",
+	},
+	root_dir = function(filename, bufnr)
+		-- return "the path to the root directory depending on the filename..."
+		return vim.fn.getcwd()
+	end,
+	single_file_support = true,
+	settings = {
+		formatterMode = "typstfmt",
+	},
+})

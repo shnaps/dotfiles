@@ -1,4 +1,4 @@
-local servers = { "html", "jdtls", "cssls", "clangd", "ltex", "ruff_lsp", "tinymist"}
+local servers = { "html", "jdtls", "cssls", "clangd", "ltex", "ruff_lsp" }
 
 require("mason").setup()
 require("mason-nvim-dap").setup({
