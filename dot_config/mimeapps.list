@@ -21,6 +21,7 @@ x-scheme-handler/mailto=userapp-Thunderbird-6EOSI2.desktop
 message/rfc822=userapp-Thunderbird-6EOSI2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6EOSI2.desktop
 x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-DEKA21.desktop;
@@ -44,3 +45,4 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoff
 text/x-tex=texmaker.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-6EOSI2.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-6EOSI2.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
