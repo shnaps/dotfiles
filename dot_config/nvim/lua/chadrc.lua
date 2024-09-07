@@ -35,21 +35,4 @@ M.base46 = {
 	theme_toggle = { "bearded-arc", "one_light" },
 }
 
-M.mason = {
-	cmd = true,
-	pkgs = {
-		"lua-language-server",
-		"prettier",
-		"stylua",
-		"google-java-format",
-		"java-debug-adapter",
-		"clang-format",
-		"tinymist",
-		"typstfmt",
-		"bibtex-tidy",
-		"ast-grep",
-		"typescript-language-server",
-	},
-}
-
 return M

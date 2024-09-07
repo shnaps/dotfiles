@@ -1,1 +1,3 @@
-return { "folke/neoconf.nvim" }
+return {
+	"folke/neoconf.nvim",
+}

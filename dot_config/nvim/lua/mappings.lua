@@ -6,8 +6,6 @@ local hardtime = require("hardtime")
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "General Enter command mode" })
-
 map("n", "<leader>i", function()
 	-- If we find a floating window, close it.
 	local found_float = false
