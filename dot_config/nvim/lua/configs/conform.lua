@@ -9,7 +9,7 @@ local options = {
 		java = { "google-java-format" },
 		python = { "ruff_format" },
 		sh = { "shfmt" },
-		typst = { "typstfmt" },
+		typst = { "typstyle" },
 		tex = { "bibtex-tidy" },
 		rust = { "ast-grep" },
 	},

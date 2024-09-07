@@ -1,9 +1,6 @@
 local M = {}
 
 M.ui = {
-	theme_toggle = { "bearded-arc", "one_light" },
-	theme = "bearded-arc",
-	transparency = false,
 	nvdash = {
 		load_on_startup = true,
 
@@ -28,13 +25,31 @@ M.ui = {
 			{ "  Mappings", "Spc c h", "NvCheatsheet" },
 		},
 	},
-	cheatsheet = {
-		theme = "grid", -- simple/grid
-		excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
-	},
 }
 
 M.base46 = {
 	integrations = { "neogit" },
+	theme = "bearded-arc",
+	changed_themes = {},
+	transparency = false,
+	theme_toggle = { "bearded-arc", "one_light" },
 }
+
+M.mason = {
+	cmd = true,
+	pkgs = {
+		"lua-language-server",
+		"prettier",
+		"stylua",
+		"google-java-format",
+		"java-debug-adapter",
+		"clang-format",
+		"tinymist",
+		"typstfmt",
+		"bibtex-tidy",
+		"ast-grep",
+		"typescript-language-server",
+	},
+}
+
 return M

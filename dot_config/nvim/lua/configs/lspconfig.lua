@@ -28,6 +28,6 @@ lspconfig.tinymist.setup({
 	end,
 	single_file_support = true,
 	settings = {
-		formatterMode = "typstfmt",
+		formatterMode = "typstyle",
 	},
 })

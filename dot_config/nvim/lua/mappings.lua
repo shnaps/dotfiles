@@ -8,10 +8,6 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "General Enter command mode" })
 
-map("n", "<leader>fm", function()
-	require("conform").format()
-end, { desc = "General Format with conform" })
-
 map("n", "<leader>i", function()
 	-- If we find a floating window, close it.
 	local found_float = false
@@ -47,8 +43,6 @@ end, { desc = "Noice All" })
 map("n", "<leader>gd", function()
 	require("noice").cmd("dismiss")
 end, { desc = "Noice Dismiss all" })
-
-map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
 
 map("n", "<leader>gg", function()
 	utils.go_to_github_link()
