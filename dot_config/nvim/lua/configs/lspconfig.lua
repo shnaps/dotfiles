@@ -18,6 +18,7 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
 lspconfig.tinymist.setup({
 	filetypes = {
 		"typst",
