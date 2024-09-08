@@ -28,6 +28,7 @@ M.ui = {
 }
 
 M.base46 = {
+	integrations = { "neogit" },
 	theme = "bearded-arc",
 	changed_themes = {},
 	transparency = false,
