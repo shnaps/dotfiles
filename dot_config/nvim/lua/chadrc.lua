@@ -29,10 +29,10 @@ M.ui = {
 
 M.base46 = {
 	integrations = { "neogit" },
-	theme = "bearded-arc",
+	theme = "decay",
 	changed_themes = {},
 	transparency = false,
-	theme_toggle = { "bearded-arc", "one_light" },
+	theme_toggle = { "decay", "one_light" },
 }
 
 return M
