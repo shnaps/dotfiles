@@ -1,7 +1,7 @@
 {
-    "position": "bottom", 
+    "position": "bottom",
     //"height": 30,
-    //"width": 0, 
+    //"width": 0,
     "spacing": 0,
     "modules-center": ["sway/workspaces","sway/language","sway/scratchpad", "bluetooth", "network", "pulseaudio", "backlight", "battery", "tray", "idle_inhibitor", "clock" ],
     "sway/workspaces": {
@@ -115,7 +115,7 @@
                     // "on-click-backward": "tz_down",
                     // "on-scroll-up": "shift_up",
                     // "on-scroll-down": "shift_down"
-                    }   
+                    }
                 },
     "cpu": {
         "format": "{usage}% ",
