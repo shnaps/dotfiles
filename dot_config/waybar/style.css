@@ -10,7 +10,7 @@
   min-height: 0;
 }
 
-#waybar {
+window#waybar {
   background: transparent;
   color: @on_surface; /* MUI: on_surface */
 }
