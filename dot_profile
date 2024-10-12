@@ -11,5 +11,4 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export GTK_USE_PORTAL=0
 export TERMINAL=alacritty
-export INFOPATH=/opt/texlive/2024/texmf-dist/doc/info
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'

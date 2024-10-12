@@ -10,7 +10,6 @@ alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
 alias srv='ls -la /etc/sv/'
-alias tlmgr='sudo tlmgr'
 alias vsv='sudo vsv'
 alias tzupdate='sudo tzupdate'
 alias ssh="TERM=xterm-256color $(which ssh)"
