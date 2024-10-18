@@ -29,7 +29,7 @@ autocmd("TextYankPost", {
 
 autocmd("ModeChanged", {
 	desc = "Strategically disable diagnostics to focus on editing tasks.",
-	pattern = { "n:i", "n:v", "i:v" },
+	pattern = { "n:i", "n:v", "i:v", "v:s" },
 	group = augroup("UserDiagnostic", { clear = true }),
 	callback = function()
 		vim.diagnostic.enable(false)
