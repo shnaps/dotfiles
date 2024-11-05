@@ -24,6 +24,7 @@ local servers = {
 	cssls = {},
 	clangd = {},
 	ruff_lsp = {},
+	gopls = {},
 	tinymist = {
 		filetypes = {
 			"typst",

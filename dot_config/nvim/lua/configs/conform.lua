@@ -10,7 +10,7 @@ local options = {
 		python = { "ruff_format" },
 		sh = { "shfmt" },
 		typst = { "typstyle" },
-		tex = { "bibtex-tidy" },
+		go = { "gofmt" },
 		rust = { "ast-grep" },
 	},
 	format_on_save = {

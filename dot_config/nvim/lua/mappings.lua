@@ -3,7 +3,6 @@ local utils = require("configs.utils")
 local neogit = require("neogit")
 local hardtime = require("hardtime")
 -- add yours here
-
 local map = vim.keymap.set
 
 map("i", "jk", "<ESC>", { desc = "General Escape insert mode" })
@@ -30,4 +29,14 @@ map("n", "<leader>gg", function()
 end, { desc = "Go to GitHub link generated from string" })
 
 map("n", "<leader>gn", neogit.open, { desc = "General Open neogit" })
-map("n", "<leader>tv", hardtime.toggle, { desc = "General toggle hardtime" })
+map("n", "<leader>tg", hardtime.toggle, { desc = "General toggle hardtime" })
+
+map(
+	"n",
+	"<leader>fn",
+	"<cmd>lua require('telescope').extensions.notify.notify()<cr>",
+	{ desc = "telescope notify history", silent = true }
+)
+map("n", "<leader>fC", "<cmd>Telescope commands<cr>", { desc = "telescope commands", silent = true })
+map("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "telescope keymaps", silent = true })
+map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "telescope diagnostics", silent = true })
