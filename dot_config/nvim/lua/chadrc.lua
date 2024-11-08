@@ -10,4 +10,15 @@ M.base46 = {
 	theme_toggle = { "decay", "one_light" },
 }
 
+M.colorify = {
+	enabled = true,
+	mode = "virtual", -- fg, bg, virtual
+	virt_text = "󱓻 ",
+	highlight = { hex = true, lspvars = true },
+}
+
+M.lsp = {
+	signature = true,
+}
+
 return M

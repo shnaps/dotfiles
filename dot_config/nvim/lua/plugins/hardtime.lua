@@ -2,8 +2,8 @@ return {
 	"m4xshen/hardtime.nvim",
 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 	opts = {
-		disabled_filetypes = {
-      "nvcheatsheet",
+		disable_mouse = false,
+		disabled_filetype = {
 			"NvimTree",
 			"TelescopePrompt",
 			"aerial",
@@ -32,7 +32,12 @@ return {
 			"trouble",
 			"Trouble",
 			"fugitive",
-      "VimBeGood",
+			"dashboard",
+			"dapui_stacks",
+			"dapui_console",
+			"dapui-repl",
+			"dapui_watches",
+			"dapui_breakpoints",
 		},
 	},
 }
