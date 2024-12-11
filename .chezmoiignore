@@ -1,1 +1,12 @@
 lazy-lock.json
+{{- if ne .chezmoi.os "windows" }}
+.config/nvim/
+windows-copy-neovim-config.ps1
+{{- end }}
+{{ if ne .chezmoi.os "linux" }}
+.config
+.profile
+.bash_aliases
+.bash_profile
+.bashrc
+{{ end }}
