@@ -106,10 +106,11 @@ return {
     },
     keys = {
       { "<S-Enter>", function() require("noice").redirect(vim.fn.getcmdline()) end, mode = "c", desc = "Redirect cmdline" },
-      { "<leader>nl", function() require("noice").cmd("last") end, desc = "Noice last message" },
-      { "<leader>nh", function() require("noice").cmd("history") end, desc = "Noice history" },
-      { "<leader>na", function() require("noice").cmd("all") end, desc = "Noice all" },
-      { "<leader>nd", function() require("noice").cmd("dismiss") end, desc = "Noice dismiss all" },
+      -- NvChad muscle memory: noice under <leader>g*
+      { "<leader>gl", function() require("noice").cmd("last") end, desc = "Noice last message" },
+      { "<leader>gh", function() require("noice").cmd("history") end, desc = "Noice history" },
+      { "<leader>ga", function() require("noice").cmd("all") end, desc = "Noice all" },
+      { "<leader>gd", function() require("noice").cmd("dismiss") end, desc = "Noice dismiss all" },
     },
   },
 
@@ -119,14 +120,12 @@ return {
     event = "VeryLazy",
     opts = {
       preset = "modern",
-      -- Group labels for the leader prefixes (so the cheatsheet reads cleanly)
+      -- Group labels for leader prefixes (cheatsheet reads cleanly)
       spec = {
         { "<leader>c", group = "code" },
         { "<leader>d", group = "debug" },
         { "<leader>f", group = "find" },
-        { "<leader>g", group = "git" },
-        { "<leader>gh", group = "hunk" },
-        { "<leader>n", group = "noice" },
+        { "<leader>g", group = "git/noice" },
         { "<leader>q", group = "trouble" },
         { "<leader>t", group = "toggle" },
         { "<leader>u", group = "ui" },
@@ -135,8 +134,9 @@ return {
     keys = {
       -- Buffer-local keymaps (the "what can I press here" view)
       { "<leader>?", function() require("which-key").show({ global = false }) end, desc = "Buffer keymaps" },
-      -- Full cheatsheet of every keymap, grouped (NvCheatsheet replacement)
-      { "<leader>cs", function() require("which-key").show({ global = true }) end, desc = "Cheatsheet (all keymaps)" },
+      -- Full cheatsheet (NvCheatsheet replacement, NvChad shortcut <leader>ch)
+      { "<leader>ch", function() require("which-key").show({ global = true }) end, desc = "Cheatsheet (all keymaps)" },
+      { "<leader>wK", function() require("which-key").show({ global = true }) end, desc = "WhichKey all keymaps" },
     },
   },
 }

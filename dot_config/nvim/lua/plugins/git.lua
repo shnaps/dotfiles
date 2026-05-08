@@ -18,13 +18,19 @@ return {
           vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
         end
 
+        -- Hunk navigation
         map("n", "]h", gs.next_hunk, "Next hunk")
         map("n", "[h", gs.prev_hunk, "Previous hunk")
-        map({ "n", "v" }, "<leader>ghs", "<cmd>Gitsigns stage_hunk<cr>", "Stage hunk")
-        map({ "n", "v" }, "<leader>ghr", "<cmd>Gitsigns reset_hunk<cr>", "Reset hunk")
-        map("n", "<leader>ghp", gs.preview_hunk, "Preview hunk")
-        map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame line")
-        map("n", "<leader>ghd", gs.diffthis, "Diff this")
+        map("n", "]c", gs.next_hunk, "Next hunk")
+        map("n", "[c", gs.prev_hunk, "Previous hunk")
+
+        -- NvChad gitsigns muscle memory
+        map("n", "<leader>ph", gs.preview_hunk, "Preview hunk")
+        map({ "n", "v" }, "<leader>rh", "<cmd>Gitsigns reset_hunk<cr>", "Reset hunk")
+        map({ "n", "v" }, "<leader>hs", "<cmd>Gitsigns stage_hunk<cr>", "Stage hunk")
+        map("n", "<leader>gb", function() gs.blame_line({ full = true }) end, "Blame line")
+        map("n", "<leader>td", gs.toggle_deleted, "Toggle deleted")
+        map("n", "<leader>hd", gs.diffthis, "Diff this")
       end,
     },
   },

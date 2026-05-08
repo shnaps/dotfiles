@@ -4,6 +4,13 @@ return {
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
     keys = {
+      -- NvChad <leader>fm + PR <leader>cf alias
+      {
+        "<leader>fm",
+        function() require("conform").format({ async = true, lsp_format = "fallback" }) end,
+        mode = { "n", "x" },
+        desc = "Format buffer",
+      },
       {
         "<leader>cf",
         function() require("conform").format({ async = true, lsp_format = "fallback" }) end,

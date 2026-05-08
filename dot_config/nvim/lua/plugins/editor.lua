@@ -59,7 +59,7 @@ return {
       },
     },
     keys = {
-      { "<leader>uh", function() require("hardtime").toggle() end, desc = "Toggle hardtime" },
+      { "<leader>tg", function() require("hardtime").toggle() end, desc = "Toggle hardtime" },
     },
   },
 
@@ -126,7 +126,8 @@ return {
       },
     },
     keys = {
-      -- Explorer
+      -- Explorer (NvChad: <C-n> toggle, <leader>e focus)
+      { "<C-n>", function() Snacks.explorer() end, desc = "Toggle file explorer" },
       { "<leader>e", function() Snacks.explorer() end, desc = "File explorer (snacks)" },
       { "<leader>E", function() Snacks.explorer.reveal() end, desc = "Reveal current file" },
 

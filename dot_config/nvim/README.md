@@ -54,18 +54,31 @@ nvim/
 
 ## Keymaps
 
-Leader is `<space>`. Run `:WhichKey` or `<leader>?` for the full list. Highlights:
+Leader is `<space>`. Run `<leader>ch` (cheatsheet) or `<leader>?` (buffer-local) for the full list. NvChad muscle-memory shortcuts are preserved where possible. Highlights:
 
 - `<leader>ff` — find files
-- `<leader>fg` — live grep
-- `<leader>e`  — file explorer
-- `<leader>cs` — cheatsheet (full keymap reference, NvCheatsheet replacement)
+- `<leader>fa` — find all files (hidden)
+- `<leader>fw` — live grep
+- `<leader>fb` — find buffers
+- `<leader>fo` — recent files
+- `<leader>fz` — fuzzy search current buffer
+- `<leader>e` / `<C-n>` — file explorer
+- `<leader>ch` — cheatsheet (NvCheatsheet replacement)
 - `<leader>?`  — buffer-local keymaps
+- `<leader>n` / `<leader>rn` — toggle line numbers / relative
+- `<leader>/` — toggle comment
+- `<leader>fm` / `<leader>cf` — format buffer
 - `<leader>gn` — neogit
-- `<leader>cf` — format buffer
+- `<leader>gb` — git blame line
+- `<leader>gl/gh/ga/gd` — noice last/history/all/dismiss
+- `<leader>gg` — open GitHub link from string under cursor
+- `<leader>ph` / `<leader>rh` / `<leader>hs` — preview / reset / stage hunk
 - `<leader>q*` — trouble (diagnostics, symbols, lsp, qflist)
 - `<leader>d*` — debugger
-- `gr*`        — LSP actions (rename, references, implementation, etc.)
+- `<leader>ra` / `<leader>ca` — LSP rename / code action
+- `gd` / `gi` / `gr*` — LSP nav (definition, implementation, Nvim 0.11+ defaults)
+- `<C-s>` / `<C-c>` — save / copy whole file
+- `<Tab>` / `<S-Tab>` — buffer next / previous
 
 The dashboard (snacks.dashboard) shows on startup with file/grep/recent/config/lazy/mason shortcuts — the NvDash equivalent.
 

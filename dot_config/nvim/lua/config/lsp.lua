@@ -41,15 +41,25 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
     end
 
+    -- Nvim 0.11+ defaults
     map("grn", vim.lsp.buf.rename, "Rename")
     map("gra", vim.lsp.buf.code_action, "Code action", { "n", "x" })
     map("grr", vim.lsp.buf.references, "References")
     map("gri", vim.lsp.buf.implementation, "Implementation")
     map("grd", vim.lsp.buf.definition, "Definition")
     map("grD", vim.lsp.buf.declaration, "Declaration")
+    map("grt", vim.lsp.buf.type_definition, "Type definition")
     map("gO", vim.lsp.buf.document_symbol, "Document symbols")
     map("gW", vim.lsp.buf.workspace_symbol, "Workspace symbols")
-    map("grt", vim.lsp.buf.type_definition, "Type definition")
+
+    -- NvChad muscle memory (aliases)
+    map("gd", vim.lsp.buf.definition, "Definition")
+    map("gD", vim.lsp.buf.declaration, "Declaration")
+    map("gi", vim.lsp.buf.implementation, "Implementation")
+    map("<leader>ra", vim.lsp.buf.rename, "Rename")
+    map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "x" })
+    map("<leader>D", vim.lsp.buf.type_definition, "Type definition")
+    map("<leader>sh", vim.lsp.buf.signature_help, "Signature help")
 
     -- Inlay hints toggle
     local client = vim.lsp.get_client_by_id(event.data.client_id)

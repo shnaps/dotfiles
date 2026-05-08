@@ -17,6 +17,15 @@ return {
       vim.cmd.colorscheme("tokyonight")
     end,
     keys = {
+      -- NvChad <leader>th was a theme picker; here it toggles light/dark for tokyonight.
+      {
+        "<leader>th",
+        function()
+          local current = vim.o.background
+          vim.o.background = (current == "dark") and "light" or "dark"
+        end,
+        desc = "Toggle theme (light/dark)",
+      },
       {
         "<leader>uT",
         function()
