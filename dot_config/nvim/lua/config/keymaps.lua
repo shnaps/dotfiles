@@ -48,6 +48,18 @@ map("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, 
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "Diagnostic loclist" })
 
+-- Lists (replaces trouble.nvim with the built-in quickfix and location lists)
+map("n", "<leader>qx", vim.diagnostic.setqflist, { desc = "Diagnostics (quickfix)" })
+map("n", "<leader>qX", vim.diagnostic.setloclist, { desc = "Buffer diagnostics (loclist)" })
+map("n", "<leader>qs", vim.lsp.buf.document_symbol, { desc = "Symbols (loclist)" })
+map("n", "<leader>ql", vim.lsp.buf.references, { desc = "LSP references (quickfix)" })
+map("n", "<leader>qL", function()
+  vim.cmd(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and "lclose" or "lopen")
+end, { desc = "Toggle location list" })
+map("n", "<leader>qQ", function()
+  vim.cmd(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and "cclose" or "copen")
+end, { desc = "Toggle quickfix list" })
+
 -- Terminal mode: NvChad <C-x> + double-Esc fallback
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

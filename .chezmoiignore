@@ -1,4 +1,4 @@
-lazy-lock.json
+nvim-pack-lock.json
 {{- if ne .chezmoi.os "windows" }}
 .config/nvim/
 windows-copy-neovim-config.ps1

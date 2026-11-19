@@ -1,5 +1,5 @@
--- LSP setup using the modern vim.lsp.config API (Nvim 0.11+)
--- Server configs live here; mason-lspconfig auto-enables installed ones.
+-- Per-server overrides and LspAttach keymaps.
+-- mason-lspconfig (lua/plugins/lsp.lua) enables the installed servers.
 
 -- Diagnostic UI
 vim.diagnostic.config({
@@ -21,12 +21,10 @@ vim.diagnostic.config({
   },
 })
 
--- Per-server overrides. mason-lspconfig handles enabling installed servers.
 -- Servers without an entry here use defaults from nvim-lspconfig's lsp/ folder.
 vim.lsp.config("tinymist", {
   filetypes = { "typst" },
   root_markers = { ".git" },
-  single_file_support = true,
   settings = {
     formatterMode = "typstyle",
   },
@@ -61,8 +59,24 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("<leader>D", vim.lsp.buf.type_definition, "Type definition")
     map("<leader>sh", vim.lsp.buf.signature_help, "Signature help")
 
-    -- Inlay hints toggle
     local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+    -- Highlight other uses of the symbol under the cursor (replaces vim-illuminate)
+    if client and client:supports_method("textDocument/documentHighlight") then
+      local group = vim.api.nvim_create_augroup("UserLspHighlight" .. event.buf, { clear = true })
+      vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+        group = group,
+        buffer = event.buf,
+        callback = vim.lsp.buf.document_highlight,
+      })
+      vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI", "BufLeave" }, {
+        group = group,
+        buffer = event.buf,
+        callback = vim.lsp.buf.clear_references,
+      })
+    end
+
+    -- Inlay hints toggle
     if client and client:supports_method("textDocument/inlayHint") then
       map("<leader>th", function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
