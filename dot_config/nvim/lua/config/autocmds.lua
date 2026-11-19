@@ -29,6 +29,25 @@ autocmd("BufWritePre", {
   end,
 })
 
+-- Indent guide every 'shiftwidth' columns
+local function set_indent_guide()
+  local sw = vim.fn.shiftwidth()
+  local lcs = vim.opt_local.listchars:get()
+  lcs.leadmultispace = "│" .. string.rep(" ", math.max(sw - 1, 0))
+  vim.opt_local.listchars = lcs
+end
+autocmd({ "BufWinEnter", "FileType" }, {
+  desc = "Match indent guides to shiftwidth",
+  group = augroup("IndentGuides", { clear = true }),
+  callback = set_indent_guide,
+})
+autocmd("OptionSet", {
+  desc = "Match indent guides to shiftwidth",
+  group = augroup("IndentGuidesOption", { clear = true }),
+  pattern = { "shiftwidth", "tabstop" },
+  callback = set_indent_guide,
+})
+
 -- Go to last cursor position when reopening a file
 autocmd("BufReadPost", {
   desc = "Restore last cursor position",
@@ -48,7 +67,7 @@ autocmd("FileType", {
   group = augroup("CloseWithQ", { clear = true }),
   pattern = {
     "help", "lspinfo", "man", "qf", "checkhealth", "neotest-output",
-    "neotest-summary", "notify", "PlenaryTestPopup",
+    "neotest-summary", "PlenaryTestPopup",
   },
   callback = function(args)
     vim.bo[args.buf].buflisted = false

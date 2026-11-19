@@ -30,6 +30,11 @@ opt.cmdheight = 1
 opt.pumheight = 10
 opt.fillchars = { eob = " " }
 
+-- Indent guides from 'listchars' (replaces indent-blankline).
+-- config/autocmds.lua resizes the guide to each buffer's 'shiftwidth'.
+opt.list = true
+opt.listchars = { tab = "│ ", leadmultispace = "│ ", trail = "·", nbsp = "␣" }
+
 -- Behavior
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
@@ -38,6 +43,9 @@ opt.swapfile = false
 opt.updatetime = 250
 opt.timeoutlen = 400
 opt.confirm = true
+
+-- Project-local config from .nvim.lua (replaces neoconf). Nvim asks before trusting a file.
+opt.exrc = true
 
 -- Folding (treesitter-based, set up in plugin config)
 opt.foldlevel = 99

@@ -1,70 +1,41 @@
-return {
-  -- Debug adapter protocol
-  {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      "rcarriga/nvim-dap-ui",
-      "theHamsta/nvim-dap-virtual-text",
-      "nvim-neotest/nvim-nio",
-      "jay-babu/mason-nvim-dap.nvim",
-    },
-    keys = {
-      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, desc = "DAP Breakpoint condition" },
-      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP Toggle breakpoint" },
-      { "<leader>dc", function() require("dap").continue() end, desc = "DAP Continue" },
-      { "<leader>da", function() require("dap").continue({ before = function() return vim.split(vim.fn.input("Args: "), " ") end }) end, desc = "DAP Run with args" },
-      { "<leader>dC", function() require("dap").run_to_cursor() end, desc = "DAP Run to cursor" },
-      { "<leader>dg", function() require("dap").goto_() end, desc = "DAP Go to line (no execute)" },
-      { "<leader>di", function() require("dap").step_into() end, desc = "DAP Step into" },
-      { "<leader>dj", function() require("dap").down() end, desc = "DAP Down" },
-      { "<leader>dk", function() require("dap").up() end, desc = "DAP Up" },
-      { "<leader>dl", function() require("dap").run_last() end, desc = "DAP Run last" },
-      { "<leader>do", function() require("dap").step_out() end, desc = "DAP Step out" },
-      { "<leader>dO", function() require("dap").step_over() end, desc = "DAP Step over" },
-      { "<leader>dp", function() require("dap").pause() end, desc = "DAP Pause" },
-      { "<leader>dr", function() require("dap").repl.toggle() end, desc = "DAP Toggle REPL" },
-      { "<leader>dS", function() require("dap").session() end, desc = "DAP Session" },
-      { "<leader>dt", function() require("dap").terminate() end, desc = "DAP Terminate" },
-      { "<leader>dw", function() require("dap.ui.widgets").hover() end, desc = "DAP Widgets" },
-      { "<leader>dz", function() require("dap").eval() end, desc = "DAP Eval" },
-      { "<leader>dZ", function() require("dap").eval(vim.fn.input("Expression: ")) end, desc = "DAP Eval expression" },
-      -- Breakpoint list via fzf-lua (replaces telescope-dap)
-      { "<leader>df", "<cmd>FzfLua dap_breakpoints<cr>", desc = "DAP List breakpoints" },
-    },
-  },
+local dap, dapui = require("dap"), require("dapui")
 
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
-    keys = {
-      { "<leader>du", function() require("dapui").toggle({}) end, desc = "DAP UI" },
-      { "<leader>de", function() require("dapui").eval() end, mode = { "n", "v" }, desc = "DAP Eval" },
-    },
-    opts = {},
-    config = function(_, opts)
-      local dap, dapui = require("dap"), require("dapui")
-      dapui.setup(opts)
-      dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open({}) end
-      dap.listeners.before.attach.dapui_config = function() dapui.open() end
-      dap.listeners.before.launch.dapui_config = function() dapui.open() end
-      dap.listeners.before.event_exited.dapui_config = function() dapui.close() end
-    end,
-  },
+dapui.setup({})
+require("nvim-dap-virtual-text").setup({})
+require("mason-nvim-dap").setup({
+  automatic_installation = true,
+  handlers = {},
+})
 
-  {
-    "theHamsta/nvim-dap-virtual-text",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
-    opts = {},
-  },
+-- Open the UI when a session starts, close it when the program exits
+dap.listeners.after.event_initialized.dapui_config = function() dapui.open({}) end
+dap.listeners.before.attach.dapui_config = function() dapui.open() end
+dap.listeners.before.launch.dapui_config = function() dapui.open() end
+dap.listeners.before.event_exited.dapui_config = function() dapui.close() end
 
-  -- Auto-install DAP adapters via mason
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    dependencies = { "mason-org/mason.nvim", "mfussenegger/nvim-dap" },
-    cmd = { "DapInstall", "DapUninstall" },
-    opts = {
-      automatic_installation = true,
-      handlers = {},
-    },
-  },
-}
+local function map(lhs, fn, desc, mode)
+  vim.keymap.set(mode or "n", lhs, fn, { desc = desc })
+end
+
+map("<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, "DAP Breakpoint condition")
+map("<leader>db", dap.toggle_breakpoint, "DAP Toggle breakpoint")
+map("<leader>dc", dap.continue, "DAP Continue")
+map("<leader>da", function() dap.continue({ before = function() return vim.split(vim.fn.input("Args: "), " ") end }) end, "DAP Run with args")
+map("<leader>dC", dap.run_to_cursor, "DAP Run to cursor")
+map("<leader>dg", dap.goto_, "DAP Go to line (no execute)")
+map("<leader>di", dap.step_into, "DAP Step into")
+map("<leader>dj", dap.down, "DAP Down")
+map("<leader>dk", dap.up, "DAP Up")
+map("<leader>dl", dap.run_last, "DAP Run last")
+map("<leader>do", dap.step_out, "DAP Step out")
+map("<leader>dO", dap.step_over, "DAP Step over")
+map("<leader>dp", dap.pause, "DAP Pause")
+map("<leader>dr", dap.repl.toggle, "DAP Toggle REPL")
+map("<leader>dS", dap.session, "DAP Session")
+map("<leader>dt", dap.terminate, "DAP Terminate")
+map("<leader>dw", function() require("dap.ui.widgets").hover() end, "DAP Widgets")
+map("<leader>dz", function() dap.eval() end, "DAP Eval")
+map("<leader>dZ", function() dap.eval(vim.fn.input("Expression: ")) end, "DAP Eval expression")
+map("<leader>df", "<cmd>FzfLua dap_breakpoints<cr>", "DAP List breakpoints")
+map("<leader>du", function() dapui.toggle({}) end, "DAP UI")
+map("<leader>de", function() dapui.eval() end, "DAP Eval", { "n", "v" })
